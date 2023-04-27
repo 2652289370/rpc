@@ -1,3 +1,4 @@
+
 /*
  *                        _oo0oo_
  *                       o8888888o
@@ -26,8 +27,15 @@
 
 
 #include "DataStream.h"
+#include <iostream>
+
+using namespace w::serialize;
 
 int main()
 {
+    DataStream ds;
+    bool a = true;
+    ds.write(a);
+    ds.show();
     return 0;
 }

@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../serialize/include/DataStream.h
+iostream
+-
+string.h
+-
+cstdint
+-
+cstring
+-
+vector
+-
+
+/home/w/code/ros/serialize/src/DataStream.cpp
+DataStream.h
+/home/w/code/ros/serialize/src/DataStream.h
+
