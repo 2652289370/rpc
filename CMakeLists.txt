@@ -1,20 +1,26 @@
-cmake_minimum_required(VERSION 3.0)
-project(ros_test)
+CMAKE_MINIMUM_REQUIRED(VERSION 3.5)
 
-# 如果代码需要支持C++11，就直接加上这句
-# SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++2a")
-set(CMAKE_CXX_STANDARD 14)
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
-# 如果想要生成的可执行文件拥有符号表，可以gdb调试，就直接加上这句
-add_definitions("-Wall -g")
-#添加OpenCV库，头文件
-# find_package(OpenCV REQUIRED)
-# include_directories(${OPENCV_INCLUDE_DIRS})
+PROJECT(SJTU-RM-CV)
+SET(CMAKE_CXX_STANDARD 11)
+SET(CMAKE_BUILD_TYPE RELEASE)
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3")
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DPATH=\"\\\"${PROJECT_SOURCE_DIR}\\\"\"")
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D${CMAKE_SYSTEM_NAME}")
+SET(BIN_NAME "run")
 
 
-include_directories(${PROJECT_SOURCE_DIR}/serialize/include)
+FIND_FILE(CONFIG_FOUND "config.h" "others/include/config")
+if (CONFIG_FOUND)
+    MESSAGE("Found config.h")
+    SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DWITH_CONFIG")
+endif()
 
-add_executable(ros_test src/main.cpp serialize/src/DataStream.cpp)
+FIND_PACKAGE(Threads)
 
-#链接库文件到工程
-target_link_libraries(ros_test)
+INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/serialize/include)
+
+
+FILE(GLOB_RECURSE sourcefiles "serialize/src/*.cpp")
+ADD_EXECUTABLE(${BIN_NAME} src/main.cpp ${sourcefiles})
+
+TARGET_LINK_LIBRARIES(${BIN_NAME} ${CMAKE_THREAD_LIBS_INIT})

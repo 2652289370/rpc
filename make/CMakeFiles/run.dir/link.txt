@@ -1,0 +1,1 @@
+/usr/bin/c++   -O3 -DPATH="\"/home/w/code/ros\"" -DLinux -O3 -DNDEBUG   CMakeFiles/run.dir/src/main.cpp.o CMakeFiles/run.dir/serialize/src/DataStream.cpp.o  -o run  -lpthread 

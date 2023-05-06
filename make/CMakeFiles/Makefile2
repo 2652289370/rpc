@@ -53,7 +53,7 @@ CMAKE_BINARY_DIR = /home/w/code/ros/make
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/ros_test.dir/all
+all: CMakeFiles/run.dir/all
 
 .PHONY : all
 
@@ -63,36 +63,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/ros_test.dir/clean
+clean: CMakeFiles/run.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/ros_test.dir
+# Target rules for target CMakeFiles/run.dir
 
 # All Build rule for target.
-CMakeFiles/ros_test.dir/all:
-	$(MAKE) -f CMakeFiles/ros_test.dir/build.make CMakeFiles/ros_test.dir/depend
-	$(MAKE) -f CMakeFiles/ros_test.dir/build.make CMakeFiles/ros_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/w/code/ros/make/CMakeFiles --progress-num=1,2,3 "Built target ros_test"
-.PHONY : CMakeFiles/ros_test.dir/all
+CMakeFiles/run.dir/all:
+	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/depend
+	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/w/code/ros/make/CMakeFiles --progress-num=1,2,3 "Built target run"
+.PHONY : CMakeFiles/run.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/ros_test.dir/rule: cmake_check_build_system
+CMakeFiles/run.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/w/code/ros/make/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ros_test.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/run.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/w/code/ros/make/CMakeFiles 0
-.PHONY : CMakeFiles/ros_test.dir/rule
+.PHONY : CMakeFiles/run.dir/rule
 
 # Convenience name for target.
-ros_test: CMakeFiles/ros_test.dir/rule
+run: CMakeFiles/run.dir/rule
 
-.PHONY : ros_test
+.PHONY : run
 
 # clean rule for target.
-CMakeFiles/ros_test.dir/clean:
-	$(MAKE) -f CMakeFiles/ros_test.dir/build.make CMakeFiles/ros_test.dir/clean
-.PHONY : CMakeFiles/ros_test.dir/clean
+CMakeFiles/run.dir/clean:
+	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/clean
+.PHONY : CMakeFiles/run.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

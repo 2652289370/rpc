@@ -1,1 +1,1 @@
-/usr/bin/c++    -rdynamic CMakeFiles/ros_test.dir/src/main.cpp.o CMakeFiles/ros_test.dir/serialize/src/DataStream.cpp.o  -o ../bin/ros_test 
+/usr/bin/c++    -rdynamic CMakeFiles/ros_test.dir/serialize/src/DataStream.cpp.o CMakeFiles/ros_test.dir/src/main.cpp.o  -o ../bin/ros_test 

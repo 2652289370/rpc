@@ -1,4 +1,3 @@
-
 /*
  *                        _oo0oo_
  *                       o8888888o
@@ -28,14 +27,20 @@
 
 #include "DataStream.h"
 #include <iostream>
+#include <vector>
+
+using namespace std;
 
 using namespace w::serialize;
-
 int main()
 {
     DataStream ds;
     bool a = true;
-    ds.write(a);
+    string b = "19u0";
+    string c;
+    // cout << sizeof(int32_t) << endl;
+    ds.write(b);
     ds.show();
+    
     return 0;
 }

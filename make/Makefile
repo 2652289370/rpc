@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ros_test
+# Target rules for targets named run
 
 # Build rule for target.
-ros_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ros_test
-.PHONY : ros_test
+run: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run
+.PHONY : run
 
 # fast build rule for target.
-ros_test/fast:
-	$(MAKE) -f CMakeFiles/ros_test.dir/build.make CMakeFiles/ros_test.dir/build
-.PHONY : ros_test/fast
+run/fast:
+	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/build
+.PHONY : run/fast
 
 serialize/src/DataStream.o: serialize/src/DataStream.cpp.o
 
@@ -129,7 +129,7 @@ serialize/src/DataStream.o: serialize/src/DataStream.cpp.o
 
 # target to build an object file
 serialize/src/DataStream.cpp.o:
-	$(MAKE) -f CMakeFiles/ros_test.dir/build.make CMakeFiles/ros_test.dir/serialize/src/DataStream.cpp.o
+	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/serialize/src/DataStream.cpp.o
 .PHONY : serialize/src/DataStream.cpp.o
 
 serialize/src/DataStream.i: serialize/src/DataStream.cpp.i
@@ -138,7 +138,7 @@ serialize/src/DataStream.i: serialize/src/DataStream.cpp.i
 
 # target to preprocess a source file
 serialize/src/DataStream.cpp.i:
-	$(MAKE) -f CMakeFiles/ros_test.dir/build.make CMakeFiles/ros_test.dir/serialize/src/DataStream.cpp.i
+	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/serialize/src/DataStream.cpp.i
 .PHONY : serialize/src/DataStream.cpp.i
 
 serialize/src/DataStream.s: serialize/src/DataStream.cpp.s
@@ -147,7 +147,7 @@ serialize/src/DataStream.s: serialize/src/DataStream.cpp.s
 
 # target to generate assembly for a file
 serialize/src/DataStream.cpp.s:
-	$(MAKE) -f CMakeFiles/ros_test.dir/build.make CMakeFiles/ros_test.dir/serialize/src/DataStream.cpp.s
+	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/serialize/src/DataStream.cpp.s
 .PHONY : serialize/src/DataStream.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -156,7 +156,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/ros_test.dir/build.make CMakeFiles/ros_test.dir/src/main.cpp.o
+	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -165,7 +165,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/ros_test.dir/build.make CMakeFiles/ros_test.dir/src/main.cpp.i
+	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -174,7 +174,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/ros_test.dir/build.make CMakeFiles/ros_test.dir/src/main.cpp.s
+	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -185,7 +185,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... ros_test"
+	@echo "... run"
 	@echo "... serialize/src/DataStream.o"
 	@echo "... serialize/src/DataStream.i"
 	@echo "... serialize/src/DataStream.s"

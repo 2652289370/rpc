@@ -2,7 +2,7 @@
  * @Author: error: error: git config user.name & please set dead value or install git && error: git config user.email & please set dead value or install git & please set dead value or install git
  * @Date: 2023-04-26 11:03:45
  * @LastEditors: w 2652289370@qq.com
- * @LastEditTime: 2023-04-27 16:33:01
+ * @LastEditTime: 2023-05-06 17:09:05
  * @FilePath: /ros/serialize/src/DataStream.cpp
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -26,22 +26,27 @@ namespace w{
             switch (type)
             {
             case DataType::BOOL:
+            {
                 if ((int)(m_buf[m_pos]) == 1)
                 {
                     std::cout << "true" << std::endl;
                 }
                 else
                 {
-                    std::cout << m_buf.size() << std::endl;
-                    for (size_t i = 0; i < m_buf.size(); i++)
-                    {
-                        std::cout << m_buf[i] << std::endl;
-                    }
-                    
+                    std::cout << "false" << std::endl;
                 }
                 m_pos++;
                 break;
-            
+            }      
+            case DataType::STRING:
+            {
+                int32_t len = (int32_t)(m_buf[m_pos]);
+                m_pos += 4; 
+                std::string st = std::string(&m_buf[m_pos], len);
+                std::cout << st << std::endl;
+                break;
+            }
+                
             default:
                 std::logic_error("error type");
                 break;
@@ -75,18 +80,14 @@ namespace w{
             std::memcpy(&m_buf[size], data, len);
         }
 
-        void DataStream::write(const char & value)
-        {
-
-        }
-
-        void DataStream::write(const bool & value)
-        {
-            char type = static_cast<char>(DataType::BOOL);
-            std::cout << sizeof(DataType::BOOL) << std::endl;
-            write_data((char *)&type, sizeof(char));
-            write_data((char *)&value, sizeof(value));
-        }
+        // template<typename T>
+        // void DataStream::write(const T & value)
+        // {
+        //     std::cout << value << std::endl;
+        //     // char type = static_cast<char>(declDataType(value));
+        //     // write_data((char *)&type, sizeof(char));
+        //     // write_data((char *)&value, sizeof(value));
+        // }
 
     }
 }

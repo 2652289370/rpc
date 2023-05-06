@@ -57,22 +57,9 @@ include CMakeFiles/ros_test.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/ros_test.dir/flags.make
 
-CMakeFiles/ros_test.dir/src/main.cpp.o: CMakeFiles/ros_test.dir/flags.make
-CMakeFiles/ros_test.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/w/code/ros/make/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ros_test.dir/src/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ros_test.dir/src/main.cpp.o -c /home/w/code/ros/src/main.cpp
-
-CMakeFiles/ros_test.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ros_test.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/w/code/ros/src/main.cpp > CMakeFiles/ros_test.dir/src/main.cpp.i
-
-CMakeFiles/ros_test.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ros_test.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/w/code/ros/src/main.cpp -o CMakeFiles/ros_test.dir/src/main.cpp.s
-
 CMakeFiles/ros_test.dir/serialize/src/DataStream.cpp.o: CMakeFiles/ros_test.dir/flags.make
 CMakeFiles/ros_test.dir/serialize/src/DataStream.cpp.o: ../serialize/src/DataStream.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/w/code/ros/make/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ros_test.dir/serialize/src/DataStream.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/w/code/ros/make/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ros_test.dir/serialize/src/DataStream.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ros_test.dir/serialize/src/DataStream.cpp.o -c /home/w/code/ros/serialize/src/DataStream.cpp
 
 CMakeFiles/ros_test.dir/serialize/src/DataStream.cpp.i: cmake_force
@@ -83,16 +70,29 @@ CMakeFiles/ros_test.dir/serialize/src/DataStream.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ros_test.dir/serialize/src/DataStream.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/w/code/ros/serialize/src/DataStream.cpp -o CMakeFiles/ros_test.dir/serialize/src/DataStream.cpp.s
 
+CMakeFiles/ros_test.dir/src/main.cpp.o: CMakeFiles/ros_test.dir/flags.make
+CMakeFiles/ros_test.dir/src/main.cpp.o: ../src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/w/code/ros/make/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ros_test.dir/src/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ros_test.dir/src/main.cpp.o -c /home/w/code/ros/src/main.cpp
+
+CMakeFiles/ros_test.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ros_test.dir/src/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/w/code/ros/src/main.cpp > CMakeFiles/ros_test.dir/src/main.cpp.i
+
+CMakeFiles/ros_test.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ros_test.dir/src/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/w/code/ros/src/main.cpp -o CMakeFiles/ros_test.dir/src/main.cpp.s
+
 # Object files for target ros_test
 ros_test_OBJECTS = \
-"CMakeFiles/ros_test.dir/src/main.cpp.o" \
-"CMakeFiles/ros_test.dir/serialize/src/DataStream.cpp.o"
+"CMakeFiles/ros_test.dir/serialize/src/DataStream.cpp.o" \
+"CMakeFiles/ros_test.dir/src/main.cpp.o"
 
 # External object files for target ros_test
 ros_test_EXTERNAL_OBJECTS =
 
-../bin/ros_test: CMakeFiles/ros_test.dir/src/main.cpp.o
 ../bin/ros_test: CMakeFiles/ros_test.dir/serialize/src/DataStream.cpp.o
+../bin/ros_test: CMakeFiles/ros_test.dir/src/main.cpp.o
 ../bin/ros_test: CMakeFiles/ros_test.dir/build.make
 ../bin/ros_test: CMakeFiles/ros_test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/w/code/ros/make/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ../bin/ros_test"
