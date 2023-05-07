@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/w/code/ros/serialize/src/DataStream.cpp" "/home/w/code/ros/make/CMakeFiles/run.dir/serialize/src/DataStream.cpp.o"
-  "/home/w/code/ros/src/main.cpp" "/home/w/code/ros/make/CMakeFiles/run.dir/src/main.cpp.o"
+  "/home/w/work/rpc/serialize/src/DataStream.cpp" "/home/w/work/rpc/make/CMakeFiles/run.dir/serialize/src/DataStream.cpp.o"
+  "/home/w/work/rpc/src/main.cpp" "/home/w/work/rpc/make/CMakeFiles/run.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

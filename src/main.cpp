@@ -49,10 +49,11 @@ int main()
    
     vector<double> d;
     d.push_back(10.0);
-    d.push_back(20);
+    d.push_back(10.0);
+
     double f = 3.5;
-    // cout << d.size() << "      "<< d.end() - d.begin() << endl;
-    ds.write(f);
+    char s = 'b';
+    ds.write(d);
     ds.show();
     
     return 0;

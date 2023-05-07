@@ -25,6 +25,13 @@ namespace w{
             m_pos++;
             switch (type)
             {
+            case DataType::CHAR:
+            {
+                char s = *((char *)&m_buf[m_pos]);
+                m_pos++;
+                std::cout << s << std::endl;
+                break;
+            }
             case DataType::BOOL:
             {
                 if ((int)(m_buf[m_pos]) == 1)
@@ -52,14 +59,15 @@ namespace w{
                 std::cout << a << std::endl;
                 break;
             }
-            case DataType::VECTOR:
+            case DataType::CONTAINER:
             {
                 int32_t len = (int32_t)(m_buf[m_pos]);
-                m_pos += 4; 
+                m_pos += 4;
                 for (size_t i = 0; i < len; i++)
                 {
+                    m_pos++;
                     double a = *(double *)&m_buf[m_pos];
-                    // m_pos += sizeof(double);
+                    m_pos += 8;
                     std::cout << a << std::endl;
                 }
                 break;

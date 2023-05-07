@@ -71,11 +71,8 @@ namespace w{
                 FLOAT,
                 DOUBLE,
                 STRING,
-                VECTOR,
-                SET,
+                CONTAINER,
                 MAP,
-                LIST,
-                DEQUE,
                 CUSTOM
             };
             enum Endian{
@@ -112,13 +109,12 @@ namespace w{
             template<typename T, typename std::enable_if<is_container<T>, int>::type = 0>
             void write(const T & value)
             {
-                char type = static_cast<char>(DataType::VECTOR);
+                char type = static_cast<char>(DataType::CONTAINER);
                 write_data((char *)&type, sizeof(char));
                 int32_t len = value.size();
-                write(len);
+                write_data((char *)&len, sizeof(len));
                 for (auto it = value.begin(); it != value.end(); it++)
                 {
-                    std::cout << typeid(*it).name() << std::endl;
                     write(*it);
                 }
             }
@@ -137,8 +133,8 @@ namespace w{
             {
                 
             }
-
-            void read()
+            template<typename T>
+            bool read(T& value)
             {
                 
             }
