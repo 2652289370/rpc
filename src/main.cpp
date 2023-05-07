@@ -1,4 +1,12 @@
 /*
+ * @Author: w 2652289370@qq.com
+ * @Date: 2023-04-27 17:10:25
+ * @LastEditors: w 2652289370@qq.com
+ * @LastEditTime: 2023-05-07 16:57:31
+ * @FilePath: /ros/src/main.cpp
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
+/*
  *                        _oo0oo_
  *                       o8888888o
  *                       88" . "88
@@ -38,8 +46,13 @@ int main()
     bool a = true;
     string b = "19u0";
     string c;
-    // cout << sizeof(int32_t) << endl;
-    ds.write(b);
+   
+    vector<double> d;
+    d.push_back(10.0);
+    d.push_back(20);
+    double f = 3.5;
+    // cout << d.size() << "      "<< d.end() - d.begin() << endl;
+    ds.write(f);
     ds.show();
     
     return 0;

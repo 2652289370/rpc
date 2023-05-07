@@ -44,6 +44,9 @@
         "numeric": "cpp",
         "optional": "cpp",
         "tuple": "cpp",
-        "sstream": "cpp"
+        "sstream": "cpp",
+        "list": "cpp",
+        "set": "cpp",
+        "map": "cpp"
     }
 }

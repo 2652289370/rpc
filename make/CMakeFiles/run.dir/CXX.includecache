@@ -19,6 +19,14 @@ string
 -
 vector
 -
+list
+-
+set
+-
+deque
+-
+map
+-
 
 /home/w/code/ros/serialize/src/DataStream.cpp
 DataStream.h
