@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../serialize/include/DataStream.h
+iostream
+-
+string.h
+-
+cstdint
+-
+cstring
+-
+string
+-
+vector
+-
+list
+-
+set
+-
+deque
+-
+map
+-
+algorithm
+-
+
+/home/w/code/rpc/src/main.cpp
+DataStream.h
+/home/w/code/rpc/src/DataStream.h
+iostream
+-
+vector
+-
+
